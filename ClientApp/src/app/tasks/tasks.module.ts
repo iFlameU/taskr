@@ -19,11 +19,6 @@ import { AddTaskFormComponent } from './add-task-form/add-task-form.component'
         component: TasksComponent,
         children: [
           {
-            path: '',
-            component: AddTaskButtonComponent,
-            pathMatch: 'full'
-          },
-          {
             path: 'add-task-form',
             component: AddTaskFormComponent
           },
