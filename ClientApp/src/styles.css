@@ -1,16 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
-
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
-}
-
-code {
-  color: #e01a76;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+:root {
+  --color-most-dark: rgb(48, 76, 137);
+  --color-dark: rgb(100, 141, 229);
+  --color-light: rgb(158, 183, 229);
+  --color-accent: rgb(247, 197, 159);
+  --color-alert: rgb(255, 107, 53);
 }
