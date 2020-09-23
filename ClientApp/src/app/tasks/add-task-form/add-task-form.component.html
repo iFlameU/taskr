@@ -5,5 +5,5 @@
   <label for="description">Description</label>
   <textarea id="description" formControlName="description"></textarea>
 
-  <button type="submit" class="btn" (click)=addTask()>Add task</button>
+  <button type="submit" class="btn" (click)=addTask() [disabled]="!taskForm.valid">Add task</button>
 </form>

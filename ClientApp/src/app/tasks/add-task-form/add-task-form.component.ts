@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {BackEnd} from '../../services/backend.service';
+import {Task} from '../../models/Task';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-add-task-form',
@@ -10,7 +13,9 @@ export class AddTaskFormComponent implements OnInit {
   taskForm: FormGroup;
 
   constructor(
-    formBuilder: FormBuilder
+    formBuilder: FormBuilder,
+    private backend: BackEnd,
+    private router: Router
   ) {
     this.taskForm = formBuilder.group({
       name: ['', Validators.required],
@@ -22,5 +27,10 @@ export class AddTaskFormComponent implements OnInit {
   }
 
   addTask() {
+    this.backend.addTask(new Task(this.taskForm.getRawValue()))
+      .subscribe(
+        _ => {this.router.navigateByUrl('').then(); },
+        error => alert(error.message)
+      );
   }
 }
