@@ -1,1 +1,9 @@
-<p>add-task-form works!</p>
+<form [formGroup]="taskForm">
+  <label for="name">Name</label>
+  <input type="text" id="name" formControlName="name" required>
+
+  <label for="description">Description</label>
+  <textarea id="description" formControlName="description"></textarea>
+
+  <button type="submit" class="btn" (click)=addTask()>Add task</button>
+</form>

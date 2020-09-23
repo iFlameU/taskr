@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-add-task-form',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-task-form.component.css']
 })
 export class AddTaskFormComponent implements OnInit {
+  taskForm: FormGroup;
 
-  constructor() { }
+  constructor(
+    formBuilder: FormBuilder
+  ) {
+    this.taskForm = formBuilder.group({
+      name: ['', Validators.required],
+      description: ['']
+    });
+  }
 
   ngOnInit() {
   }
 
+  addTask() {
+  }
 }

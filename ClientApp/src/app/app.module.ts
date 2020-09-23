@@ -18,8 +18,12 @@ import {TasksComponent} from './tasks/tasks.component';
     TasksModule,
     RouterModule.forRoot([
       {
-        path: '**',
+        path: '',
         component: TasksComponent
+      },
+      {
+        path: '**',
+        redirectTo: ''
       }
     ])
   ],
