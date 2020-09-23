@@ -5,3 +5,19 @@
   --color-accent: rgb(247, 197, 159);
   --color-alert: rgb(255, 107, 53);
 }
+
+.btn {
+  color: #fff;
+  background-color: var(--color-most-dark);
+  border-radius: 10px;
+  padding: 3px 10px 5px;
+}
+
+.btn:hover {
+  background-color: var(--color-dark);
+  color: #e8e8e8;
+}
+
+.btn:focus {
+  box-shadow: unset;
+}
